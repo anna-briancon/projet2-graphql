@@ -3,7 +3,7 @@ const { Sequelize } = require("@sequelize/core");
 const sequelize = new Sequelize({
   url: process.env.MYSQL_URL,
   dialect: "mysql",
-}); // Example for postgres
+});
 
 (async () => {
   try {

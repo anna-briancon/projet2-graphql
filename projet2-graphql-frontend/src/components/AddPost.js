@@ -24,12 +24,13 @@ export default function AddPost() {
     e.preventDefault();
     await addPost({ variables: { title, link, author } });
     navigate('/');
+    window.location.reload();
   };
 
   return (
-    <div className="max-w-2xl mx-auto">
+    <div className="max-w-2xl mx-auto mt-20 p-10 bg-white rounded shadow">
       <h2 className="text-2xl font-bold mb-6 text-center">Add New Post</h2>
-      <form onSubmit={handleSubmit} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+      <form onSubmit={handleSubmit} className="px-8 pt-6 mb-4">
         <div className="mb-4">
           <label htmlFor="title" className="block text-gray-700 text-sm font-bold mb-2">Title:</label>
           <input
@@ -63,8 +64,8 @@ export default function AddPost() {
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           />
         </div>
-        <div className="flex items-center justify-between">
-          <button type="submit" className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline transition duration-300 rounded">
+        <div className="flex items-center justify-around">
+          <button type="submit" className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-8 focus:outline-none focus:shadow-outline transition duration-300 rounded-full">
             Add Post
           </button>
         </div>

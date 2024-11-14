@@ -63,7 +63,7 @@ export default function PostList({ sortBy }) {
     <div>
       <div className="mb-6 flex justify-between items-center">
         <h2 className="text-2xl font-bold">Posts</h2>
-        <Link to="/add-post" className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded transition duration-300">
+        <Link to="/add-post" className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-8 rounded-full transition duration-300">
           Add Post
         </Link>
       </div>
@@ -87,7 +87,7 @@ export default function PostList({ sortBy }) {
               <div className="flex items-center justify-center mr-5">
                 <button
                   onClick={() => handleDelete(id)}
-                  className="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-3 rounded text-sm transition duration-300"
+                  className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-6 rounded-full text-sm transition duration-300"
                 >
                   Delete
                 </button>
