@@ -55,8 +55,10 @@ export default function PostList({ sortBy }) {
   if (error) return <p className="text-center text-red-500">Error: {error.message}</p>;
 
   const handleDelete = async (id) => {
-    await deletePost({ variables: { id } });
-    refetch();
+    if (window.confirm('Êtes-vous sûr de vouloir supprimer ce post ?')) {
+      await deletePost({ variables: { id } });
+      refetch();
+    }
   };
 
   return (
